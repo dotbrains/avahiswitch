@@ -6,7 +6,7 @@ Raspberry Pi service to turn on `avahi-daemon` if `/boot/avahi` is present.
 
 In order to use the [`avahiswitch.service`](avahiswitch.service) you must add a file called `avahi` in the `/boot/` directory (`touch /boot/avahi`). This will enable the `avahi-daemon`, which in turn makes the Raspberry Pi discoverable via the name `kali-pi.local`.
 
-Additionally, you must edit both `/boot/cmdline.txt` and `/boot/config.txt` to enable `enthernet gadget mode`.
+Additionally, you must edit both `/boot/cmdline.txt` and `/boot/config.txt` to enable `ethernet gadget mode`.
 
 *   `/boot/cmdline.txt`: Add `modules-load=dwc2,g_ether` after `rootwait`
 *   `/boot/config.txt`: Add `dtoverlay=dwc2`
